@@ -1,0 +1,362 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Diego Imbachi - Desarrollador Fullstack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index2.css' %}">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">JDI</div>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Juan Diego Imbachi</h1>
+                <p>Desarrollador Fullstack | Python | Django | Java | Spring Boot</p>
+                <a href="#proyectos" class="btn">Ver Proyectos</a>
+            </div>
+            <div class="profile-image">
+                <img src="{% static 'img/profile.jpg' %}" alt="Juan Diego Imbachi">
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="skills">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Desarrollo Web</h3>
+                <p>Especializado en creación de aplicaciones web eficientes y escalables.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Bases de datos</h3>
+                <p>Experiencia en bases de datos relacionales y no relacionales, SQL, diseño de esquemas y optimización.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
+                <h3>Herramientas de desarrollo</h3>
+                <p>Dominio de IDEs, Git, debuggers y herramientas de profiling.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Metodologías ágiles</h3>
+                <p>Experiencia en Scrum, Kanban y ciclos de vida de desarrollo de software.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-bug"></i>
+                <h3>Testing QA</h3>
+                <p>Experiencia en testing de APIs y creación de scripts de testing manual.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Frameworks</h3>
+                <p>Experiencia en Django y Spring Boot para desarrollo de aplicaciones empresariales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="projects">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="{% static 'img/THSENA.png' %}" alt="Portal de Talento Humano" class="project-img">
+                <div class="project-content">
+                    <h3>Portal de Talento Humano</h3>
+                    <p>Software para aprendices de Talento Humano enfocado en la práctica de herramientas del área y desarrollo de habilidades para selección de personal. Desarrollado con Django, HTML, CSS y JavaScript.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'img/Operaciones.png' %}" alt="Sistema Interno" class="project-img">
+                <div class="project-content">
+                    <h3>Actualización de Sistema Interno</h3>
+                    <p>Actualización de sistema Java 8 a Spring Boot, mejorando la gestión de información de operaciones, servidores, clientes y usuarios. Implementación de interfaces modernas con HTML, CSS y JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="about-me">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-container">
+            <!-- Columna izquierda -->
+            <div class="about-left">
+                <div class="about-content">
+                    <p>Soy un desarrollador web apasionado por crear soluciones innovadoras y eficientes. Certificado como Analista y desarrollador de Software, con sólida experiencia en Django, Python y Spring Boot.</p>
+                    <p>Mi mayor motivación es el aprendizaje continuo y enfrentar nuevos desafíos. Me especializo en desarrollo backend, donde aplico mi lógica y creatividad para resolver problemas complejos.</p>
+                    <p>Actualmente, formo parte de SHARKSTART, un proyecto ambicioso con gran potencial de crecimiento, donde contribuyo al desarrollo de soluciones innovadoras junto a un equipo talentoso.</p>
+                </div>
+            
+                <div class="cta-buttons">
+                    <button class="btn" onclick="openModal('certifications')">
+                        <i class="fas fa-certificate"></i> Ver Certificaciones
+                    </button>
+                    <a href="{% static '/docs/HV_Juan_Diego_Imbachi.pdf' %}" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Descargar CV
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Columna derecha -->
+            <div class="about-right">
+                <h3 class="interests-title">Mis Intereses</h3>
+                <div class="interests-grid">
+                    <div class="interest-tag">
+                        <i class="fas fa-code"></i>
+                        <span>Programación</span>
+                    </div>
+                    <div class="interest-tag">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Videojuegos</span>
+                    </div>
+                    <div class="interest-tag">
+                        <i class="fas fa-music"></i>
+                        <span>Música</span>
+                    </div>
+                    <div class="interest-tag">
+                        <i class="fas fa-book"></i>
+                        <span>Lectura</span>
+                    </div>
+                    <div class="interest-tag">
+                        <i class="fas fa-camera"></i>
+                        <span>Fotografía</span>
+                    </div>
+                    <div class="interest-tag">
+                        <i class="fas fa-film"></i>
+                        <span>Cine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Certificaciones -->
+        <div id="certificationsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Certificaciones y Educación</h2>
+                    <button class="close-btn" onclick="closeModal('certifications')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="certifications-grid">
+
+                        <div class="certification-card">
+                            <div class="certification-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="certification-details">
+                                <h3>Analista y Desarrollador de Software</h3>
+                                <p class="institution">SENA</p>
+                                <p class="date">2024</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+        
+                    <!-- Educación -->
+                    <h3 class="section-subtitle">Educación</h3>
+                    <div class="education-timeline">
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Tecnólogo en Análisis y Desarrollo de Software</h4>
+                                <p class="institution">SENA</p>
+                                <p class="date">2023 - 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Técnico de Programación de Software</h4>
+                                <p class="institution">SENA</p>
+                                <p class="date">2021 - 2022</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2 class="section-title">Contacto</h2>
+        <div class="enunciate">
+            <p class="contact-text">Si quieres saber más de mí o de SHARKSTART</p>
+            <p class="contact-text">¡No dudes en contactarme!</p>
+        </div>
+        <form id="contactForm" class="contact-form" onsubmit="return sendEmail(event)">
+            <div class="form-group">
+                <input type="text" id="name" class="form-control" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Tu correo" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" class="form-control" rows="5" placeholder="Tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn" id="submitBtn">
+                <span>Enviar Mensaje</span>
+                <div class="loading-spinner"></div>
+            </button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3 class="footer-name">Juan Diego Imbachi</h3>
+                <p class="footer-description">
+                    Desarrollador Fullstack apasionado por crear soluciones innovadoras 
+                    y eficientes. Especializado en Python, Django y Spring Boot.
+                </p>
+            </div>
+            <div class="footer-social">
+                <h4 class="social-title">SOCIAL</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/juan-diego-imbachi-hoyos-2a985630b/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/juand2306" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/573203157252" class="social-link" aria-label="Whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:juandiegoimbachihoyos@gmail.com?subject=Contacto%20desde%20tu%20portafolio" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© Copyright 2024 · Desarrollado por Juan Diego Imbachi</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        //------------MODAL-------------------------------------------------------
+        function openModal(modalType) {
+            document.getElementById(modalType + 'Modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(modalType) {
+            document.getElementById(modalType + 'Modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Cerrar modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+        
+        // Cerrar modal con la tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.getElementsByClassName('modal');
+                for (let modal of modals) {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            }
+        });
+
+        // Inicializa EmailJS con mi Public Key
+    (function() {
+        emailjs.init("uvBRZFE4gOz-ec7FO");
+    })();
+
+    function showNotification(message, type) {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.classList.add('show');
+        }, 100);
+        
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 3000);
+    }
+
+    async function sendEmail(event) {
+        event.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.classList.add('loading');
+        
+        const templateParams = {
+            from_name: document.getElementById('name').value,
+            from_email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+            to_name: 'Juan Diego', // Tu nombre
+        };
+
+        try {
+            await emailjs.send(
+                'service_e6lsokd', // Service ID
+                'template_65dv9yo', // Template ID
+                templateParams
+            );
+            
+            showNotification('¡Mensaje enviado con éxito!', 'success');
+            document.getElementById('contactForm').reset();
+        } catch (error) {
+            console.error('Error:', error);
+            showNotification('Error al enviar el mensaje. Por favor, intenta nuevamente.', 'error');
+        } finally {
+            submitBtn.classList.remove('loading');
+        }
+
+        return false;
+    }
+    </script>
+</body>
+</html>

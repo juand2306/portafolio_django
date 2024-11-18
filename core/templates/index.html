@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">Desarrollador Fullstack</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Juan Diego Imbachi</h1>
+            <p>Desarrollador Fullstack| Python | Django | Java | Springboot</p>
+            <a href="#proyectos" class="cta-button">Ver Proyectos</a>
+        </div>
+        <div class="profile-image">
+            <img src="{% static 'img/profile.jpg' %}" alt="Foto de perfil">
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-cards">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h2>Desarrollo Web</h2>
+                <p>Especializado en creación de aplicaciones web eficientes y escalables.</p>
+            </div>
+            <!-- Añade más tarjetas de habilidades aquí -->
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h2>Bases de datos</h2>
+                <p>Conocimiento de bases de datos relacionales y no relacionales,SQL,diseño de esquemas y optimizacion de consultas</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h2>Herramienats de desarrollo</h2>
+                <p>Experiencia en el uso de entornos
+                    de desarrollo integrados (IDEs), sistemas de control de
+                    versiones (Git), debuggers y herramientas de profiling</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h2>Metodologias de desarrollo</h2>
+                <p> Familiaridad con metodologías
+                    ágiles (Scrum, Kanban) y ciclos de vida de desarrollo de
+                    soware (SDLC).</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h2>Testeo QA</h2>
+                <p>Experiencia en testo de APIs, creacion de scripst de testeo manual</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h2>Manejo de Frameworks</h2>
+                <p>Experiencia en manejo y desarrollo en frameworks como Django y Springboot</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects">
+        <h2>Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="{% static 'img/proyecto1.jpg' %}" alt="Proyecto 1">
+                <h3>Portal de Talento humano</h3>
+                <p>Desarrolle un software para los aprendices de Talento Humano con la dinalidad de que pudieran 
+                    practicar el manejo de herramientas de su area y desarrollaran habilidades para la seleccion
+                    de personal y postulacion de vacantes.
+                    Para este proyecto utilice el Framework Django, para la parte visual utilice HTML, CSS  y 
+                    JavaScript.
+                </p>
+            </div>
+            <!-- Añade más proyectos aquí -->
+            <div class="project-card">
+                <img src="{% static 'img/proyecto1.jpg' %}" alt="Proyecto 1">
+                <h3>Actualizacion de sistema interno</h3>
+                <p>En mi etapa de Aprendiz lidere la actualizacion de un sistema interno de la empresa que fue construida con 
+                    Java 8 (bastante antigua y algo obsoleta); y la actualice al moderno Framework de Springboot. El sistema 
+                    actualizado permite manejar la informacion de operaciones, que incluye la informacion de servidores, clientes y 
+                    los usuarios y permitia programar tareas asignadas al personal. 
+                    Utilice el Framework Springboot, para la parte visual utilice HTML, CSS y JavaScript integrando modales.   
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="about-me">
+        <h2>Sobre mí</h2>
+        <p>
+            Soy un desarrollador web apasionado por crear soluciones innovadoras y eficientes. Certificado como Analista y 
+            desarrollador de Software, con sólida experiencia en Django, 
+            Python y Springboot, me dedico a construir aplicaciones web robustas y escalables.
+            Mi mayor motivación es aprender constantemente y enfrentar nuevos desafíos. Disfruto especialmente del 
+            desarrollo backend, donde puedo aplicar mi lógica y creatividad para resolver problemas complejos.
+            En mis proyectos, he desarrollado softwares de diversas índoles, donde he aplicado mis conocimientos en 
+            Django, Python, Spring Boot, HTML, CSS, JavaScript y Java, junto con la gestión de bases de datos MySQL y PostgreSQL. 
+        </p>
+        <p>
+            Actualmente, soy parte de SHARKSTART, un proyecto ambicioso con un gran potencial de crecimiento. 
+            Como miembro de este equipo, estoy emocionado de contribuir al desarrollo de soluciones innovadoras y de aprender de los 
+            talentosos profesionales que lo conforman. 
+        </p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <form action="#" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="cta-button">Enviar Mensaje</button>
+        </form>
+    </section>
+
+</body>
+</html>
